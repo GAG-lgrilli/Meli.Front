@@ -11,19 +11,29 @@ import { getAuth, signOut } from 'firebase/auth';
 })
 export class AppComponent implements OnInit{
   title = 'MeliFront';
-  constructor(private loginService: LoginService, private router: Router){
-  }
+
+
   ngOnInit():void {
     firebase.initializeApp({ 
-      //MR-DATABASE
-      apiKey: "AIzaSyDDsxvn-ZeH6U55AxO4J1f2cuqIY6IrXz4",
-      authDomain: "listado-personas-52777.firebaseapp.com"
+      //MC
+      apiKey: "AIzaSyDo9yGMcrCkpz0oZd3JInY-tajLZvNlRRs",
+  authDomain: "meli-1cdec.firebaseapp.com",
     })
   }
+  constructor(private loginService: LoginService, private router: Router){
+  }
+  // ngOnInit():void {
+  //   firebase.initializeApp({ 
+  //     //MR-DATABASE
+  //     apiKey: "AIzaSyDDsxvn-ZeH6U55AxO4J1f2cuqIY6IrXz4",
+  //     authDomain: "listado-personas-52777.firebaseapp.com"
+  //   })
+  // }
 
   isAutenticado(){
     return this.loginService.isAuthenticated();
   }
+
   salir(){
     this.loginService.logout();
   }
