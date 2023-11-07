@@ -17,8 +17,8 @@ export class CategoriesComponent implements OnInit{
     this.generalService.getCategories().subscribe((response:Category[]) => {
       this.listCategories = response;
     });
+
+   
+    //this.listCategories.push( new Category(1,"hola"))
   }
-
-  
-
 }

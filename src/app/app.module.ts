@@ -19,6 +19,7 @@ import { ProductService } from './services/product.service';
 import { UserService } from './services/user.service';
 import { ErrorComponent } from './error/error.component';
 import { RegisterService } from './services/register.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { RegisterService } from './services/register.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [LoginService, GuardService, GeneralService, ProductService, UserService, RegisterService],
   bootstrap: [AppComponent]

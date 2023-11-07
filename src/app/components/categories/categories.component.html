@@ -1,1 +1,14 @@
-<p>categories works!</p>
+<ng-container class="bg-white">
+
+  <div>
+    <h2>Lista de category</h2>
+    <ul>
+      <li *ngFor="let category of listCategories">
+        <h3>{{ category.descripcion }}</h3>
+      </li>
+    </ul>
+  </div>
+  
+</ng-container>
+
+
