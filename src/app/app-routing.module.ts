@@ -10,11 +10,12 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProvidersComponent } from './components/providers/providers.component';
 import { ProviderComponent } from './components/providers/provider/provider.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   { path: '', component: ProductsComponent,canActivate: [GuardService]},
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent,canActivate: [GuardService] },
+  { path: 'register', component: RegisterComponent},
   { path: 'profile', component: ProfileComponent,canActivate: [GuardService] },
   { path: 'products', component: ProductsComponent,canActivate: [GuardService] },
   { path: 'products/:id', component: ProductComponent,canActivate: [GuardService] },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'categories/:id', component: CategoriesComponent,canActivate: [GuardService] },
   { path: 'providers', component: ProvidersComponent,canActivate: [GuardService] },
   { path: 'provider/:id', component: ProviderComponent,canActivate: [GuardService] },
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({
