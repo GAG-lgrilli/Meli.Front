@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { GeneralService } from './services/general.service';
 import { ProductService } from './services/product.service';
 import { UserService } from './services/user.service';
+import { ErrorComponent } from './error/error.component';
+import { RegisterService } from './services/register.service';
 
 @NgModule({
   declarations: [
@@ -30,13 +32,14 @@ import { UserService } from './services/user.service';
     ProductsComponent,
     ProductComponent,
     ProfileComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [LoginService, GuardService, GeneralService, ProductService, UserService],
+  providers: [LoginService, GuardService, GeneralService, ProductService, UserService, RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
