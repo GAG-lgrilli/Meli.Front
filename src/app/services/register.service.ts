@@ -1,18 +1,18 @@
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { getAuth, signInWithEmailAndPassword, signOut} from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 
 @Injectable()
-export class LoginService{
+export class RegisterService{
 
     token: string|any;
     
     constructor(private router: Router){}
 
-    login(email:string, password: string){
+    register(email:string, password: string){
         const auth = getAuth();
 
-        signInWithEmailAndPassword(auth, email, password).then(
+        createUserWithEmailAndPassword(auth, email, password).then(
             (userCredential) => {
                 const user = userCredential.user;
                 user.getIdToken().then((token) => {
@@ -27,18 +27,4 @@ export class LoginService{
     getIdtoken(){
         return this.token;
     }
-
-    isAuthenticated(){
-        return this.token != "";
-    }
-
-    logout(){
-        const auth = getAuth();
-        auth.signOut().then(() => {
-            this.token = "";
-            this.router.navigate(['login']);
-        })
-    }
-
-
 }
