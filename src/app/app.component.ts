@@ -8,10 +8,12 @@ import * as firebase from 'firebase/app';
 })
 export class AppComponent implements OnInit{
   title = 'MeliFront';
+
   ngOnInit():void {
     firebase.initializeApp({ 
-      apiKey: "AIzaSyCs398iURQduu7ysNDC1kMX0Sf8loRXopg",
-      authDomain: "personas-1c5dd.firebaseapp.com"
+      //MC
+      apiKey: "AIzaSyDo9yGMcrCkpz0oZd3JInY-tajLZvNlRRs",
+  authDomain: "meli-1cdec.firebaseapp.com",
     })
   }
 }

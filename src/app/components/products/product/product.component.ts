@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from 'src/app/entities/product';
 
 @Component({
   selector: 'app-product',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class ProductComponent {
 
+  title : string = "Producto";
+
+  @Input() product: Product = {
+    id: 1,
+    descripcion: "Remera Oversize",
+    categoryId:"1",
+    price: 10000,
+    quantity: 1,
+    providerId: "1",
+  };
 }

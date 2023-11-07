@@ -5,7 +5,7 @@ import { getAuth, signInWithEmailAndPassword, signOut} from 'firebase/auth';
 @Injectable()
 export class LoginService{
 
-    token: string = "";
+    token: string|any;
     
     constructor(private router: Router){}
 
