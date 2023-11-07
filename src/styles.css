@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.container {
+    display: flex;
+    justify-content: flex-end; /* Centrar el contenido al final (derecha) */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Ajusta la altura como desees */
+  }
+
+.custom-button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto en el botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Borde redondeado */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de apuntar */
+    transition: background-color 0.3s; /* Transición de color de fondo */
+  
+    /* Agregar sombra al hacer hover */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  
+    /* Estilo al hacer hover */
+    &:hover {
+      background-color: #0056b3; /* Color de fondo al hacer hover */
+    }
+  }
